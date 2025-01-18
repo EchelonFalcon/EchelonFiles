@@ -1,0 +1,56 @@
+#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+version = 2
+final_space = true
+
+[[blocks]]
+ type = 'prompt'
+ alignment = 'left'
+ newline = true
+
+ [[blocks.segments]]
+  type = 'shell'
+  background = '#0077c2'
+  foreground = '#ffffff'
+  leading_diamond = ''
+  style = 'diamond'
+  template = '\uf120 {{ .Name }} '
+
+
+ [[blocks.segments]]
+  type = 'root'
+  background = '#ef5350'
+  foreground = '#FFFB38'
+  style = 'diamond'
+  template = '<parentBackground>\ue0b0</> \uf292 '
+
+[[blocks]]
+ type = 'prompt'
+ alignment = 'left'
+
+ [[blocks.segments]]
+  type = 'path'
+  background = '#FF9248'
+  foreground = '#2d3436'
+  template = ' {{ .Path }} '
+  powerline_symbol = '\ue0b0'
+  style = 'powerline'
+
+  [blocks.segments.properties]
+   folder_icon = ' \uf07b '
+   home_icon = '\ue617'
+   style = 'folder'
+
+
+  [[blocks.segments]]
+    type = 'git'
+    style = 'powerline'
+    background = '#FFFB38'
+    background_templates = [
+      "{{ if or (.Working.Changed) (.Staging.Changed) }}#ffeb95{{ end }}",
+      "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#c5e478{{ end }}",
+      "{{ if gt .Ahead 0 }}#C792EA{{ end }}",
+      "{{ if gt .Behind 0 }}#C792EA{{ end }}"
+    ]
+    foreground = '#011627'
+    powerline_symbol = '\ue0b0'
