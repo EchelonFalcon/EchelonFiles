@@ -31,6 +31,11 @@ return {
 
       require("telescope").setup({
         -- use ui-select dropdown as our ui
+        defaults = {
+          file_ignore_patterns = {
+            "node_modules"
+          }
+        },
         extensions = {
           ["ui-select"] = {
             require('telescope.themes').get_dropdown {}

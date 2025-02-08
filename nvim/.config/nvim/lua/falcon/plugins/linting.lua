@@ -1,4 +1,3 @@
-
 return {
   "mfussenegger/nvim-lint",
   event = { "BufReadPre", "BufNewFile" },
@@ -12,7 +11,8 @@ return {
       typescriptreact = { "eslint", "eslint_d" },
       bash = { "bash" },
       python = { "pylint" },
-      svelte = { "eslint", "eslint_d" }
+      svelte = { "eslint", "eslint_d" },
+      php = {},
     }
 
     vim.api.nvim_create_autocmd({ "BufWritePost" }, {

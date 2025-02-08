@@ -35,8 +35,10 @@ return {
           "lua_ls",
           "prismals",
           "pyright",
-          "eslint_d",
           "eslint",
+          "jdtls",
+          "cssmodules_ls",
+          "intelephense",
         },
         automatic_installation = true,
       })
@@ -49,6 +51,8 @@ return {
           "black",    -- python formatter
           "pylint",
           "eslint_d",
+          "java-debug-adapter",
+          "java-test",
         },
       })
     end,

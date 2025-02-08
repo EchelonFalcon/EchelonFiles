@@ -20,6 +20,7 @@ return {
         markdown = { "prettier" },
         graphql = { "prettier" },
         svelte = { "prettier" },
+        php = { { "pint", "php_cs_fixer" } },
       },
       format_on_save = {
         timeout_ms = 500,

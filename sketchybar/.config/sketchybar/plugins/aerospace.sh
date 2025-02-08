@@ -1,12 +1,15 @@
-#!/bin/sh
+#!/bin/bash
+# make sure it's executable with:
+# chmod +x ~/.config/sketchybar/plugins/aerospace.sh
 
 source "$CONFIG_DIR/colors.sh" # Loads all defined colors
 
-if [ $SELECTED = true ]; then
+if [ "$1" = "$FOCUSED_WORKSPACE" ]; then
   sketchybar --set $NAME background.drawing=on \
                          background.color=$RED \
                          label.color=$BAR_COLOR \
                          icon.color=$BAR_COLOR
+    sketchybar --set $NAME background.drawing=on
 else
   sketchybar --set $NAME background.drawing=off \
                          label.color=$RED \

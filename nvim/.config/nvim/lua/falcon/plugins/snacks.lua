@@ -43,6 +43,6 @@ return -- lazy.nvim
           { icon = " ", key = "q", desc = "Quit", action = ":qa" },
         },
       },
-    },
+    }
   },
 }

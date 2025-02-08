@@ -1,10 +1,6 @@
-return -- lazy.nvim
-{
+return {
   "folke/noice.nvim",
   event = "VeryLazy",
-  opts = {
-    -- add any options here
-  },
   dependencies = {
     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
     "MunifTanjim/nui.nvim",
@@ -13,7 +9,8 @@ return -- lazy.nvim
     --   If not available, we use `mini` as the fallback
     "rcarriga/nvim-notify",
   },
-  config = function()
+  opts = {
+    -- add any options here
     require("noice").setup({
       lsp = {
         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
@@ -32,5 +29,5 @@ return -- lazy.nvim
         lsp_doc_border = false,       -- add a border to hover docs and signature help
       },
     })
-  end,
+  },
 }
